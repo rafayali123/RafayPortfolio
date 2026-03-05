@@ -2,7 +2,7 @@ const Contact = require("../models/ContactModel");
 
 exports.createUser = async (req, res) => {
   try {
-    const { name, email, subject, Description } = req.body;
+    const { name, email, subject, message } = req.body;
 
     const existingUser = await Contact.findOne({ email });
     if (existingUser) {
@@ -16,7 +16,7 @@ exports.createUser = async (req, res) => {
         name,
         email,
         subject, 
-        Description
+        message
     });
 
     res.status(201).json({

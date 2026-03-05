@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     subject: String,
-    Description: String
+    message: String
 });
 
 module.exports = mongoose.model("contactus", userSchema);

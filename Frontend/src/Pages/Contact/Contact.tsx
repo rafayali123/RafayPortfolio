@@ -43,7 +43,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 
   try {
-    const response = await fetch("https://portfoliorafay.up.railway.app/api/contact/create", {
+    const response = await fetch("http://localhost:3000/api/contact/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData) 
